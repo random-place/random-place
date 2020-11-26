@@ -11,9 +11,85 @@
 
 <body>
     <h1 class="mx-auto" style="width: 200px;">{{place.name}}</h1>
+    <h2>관광</h2>
     <div class="container">
         <div class="row">
-            {% for item in items %}
+            {% for item in item1 %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if 'firstimage' in item%}
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{item.firstimage}}"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                        aria-label="Placeholder: Thumbnail">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                    </svg>
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5>{{item.title}}</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {%endfor%}
+        </div>
+    </div>
+    <h2>문화</h2>
+    <div class="container">
+        <div class="row">
+            {% for item in item2 %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if 'firstimage' in item%}
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{item.firstimage}}"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                        aria-label="Placeholder: Thumbnail">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                    </svg>
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5>{{item.title}}</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {%endfor%}
+        </div>
+    </div>
+    <h2>공연/축제</h2>
+    <div class="container">
+        <div class="row">
+            {% for item in item3 %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if 'firstimage' in item%}
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{item.firstimage}}"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                        aria-label="Placeholder: Thumbnail">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                    </svg>
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5>{{item.title}}</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {%endfor%}
+        </div>
+    </div>
+    <h2>레포츠</h2>
+    <div class="container">
+        <div class="row">
+            {% for item in item4 %}
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     {% if 'firstimage' in item%}
