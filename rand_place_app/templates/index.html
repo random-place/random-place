@@ -9,7 +9,14 @@
 
 <body>
   <h1>Go travel</h1>
-  <a href="{% url 'random' %}">random</a>
+  <!-- <a href="{% url 'random' %}">random</a> -->
+  <form method="POST" action="{% url 'random' %}">
+    {% csrf_token %}
+    <p>필터: 필터를 적용하려면 원하는 지역만 체크하세요 ( 모두 체크하지 않을 시 모두 체크된 것과같이 동작)</p>
+    <label><input type="checkbox" name="area[]" value="31">경기</label>
+    <label><input type="checkbox" name="area[]" value="37">전북</label>
+    <p><input type="submit" value="Go Travel"> <input type="reset" value="Reset"></p>
+  </form>
 </body>
 
 </html>
